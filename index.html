@@ -7,7 +7,7 @@
     <title>Countdown</title>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="icon" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./images/logoImtiaz.png">
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/vegas.min.css">
@@ -89,7 +89,10 @@
       <div class="row">
         <div class="col-lg-12">
           <!-- Header -->
-          <img src="./images/logoImtiaz.png" class="img-responsive img-thumbnail img-rounded" alt="Cinque Terre" width="104" height="36">
+          <div class="text-center">
+            <img src="./images/logoImtiaz.png" class="img-responsive img-thumbnail" alt="ImtiazMelaka" width="104" height="36">
+            <img src="./images/logoY2G.png" class="img-responsive img-thumbnail" alt="Y2G" width="104" height="36">
+          </div>
           <hr>
         </div>
       <div class="col-lg-6">
@@ -97,26 +100,7 @@
           <div class="panel-heading">
             <div class="row">
               <div class="col-xs-12">
-                <h4 id="headCountdownSPM" class="active"><em>Sijil Pelajaran Malaysia</em></h4 >
-              </div>
-            </div>
-            <hr>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <h1 id="countdownSPM" class="text-center"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="panel panel-login">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-12">
-                <h4 id="headCountdownpt3" class="active"><em class="text-danger">Pentaksiran Tingkatan 3</em></h4>
+                <h4 id="headCountdownpt3" class="active"><em>Pentaksiran Tingkatan 3</em></h4>
               </div>
             </div>
             <hr>
@@ -130,20 +114,46 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-6">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 id="headCountdownSPM" class="active"><em class="text-danger">Sijil Pelajaran Malaysia</em></h4>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <h1 id="countdownSPM" class="text-center"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <hr>
     <p style="color: #ffffff">
-      <small class="pull-right"><em>Durian Tunggal Solution</em></small>
+      <small class="pull-right"><em>&copy; Durian Tunggal Solution &deg; 2016</em></small>
     </p>
     </div>
 
     <script>
         $("#example, body").vegas({
           shuffle: true,
+          timer: false,
+          delay: 12000,
+          cover:true,
             slides: [
-              { src: './images/1.jpg', fade:8000, cover:true },
-              { src: './images/2.jpg', fade:8000 },
-              { src: './images/3.jpg', fade:8000 }
+              { src: './images/1.jpg' },
+              { src: './images/2.jpg' },
+              { src: './images/3.jpg' },
+              { src: './images/4.jpg' },
+              { src: './images/5.jpg' },
+              { src: './images/6.jpg' },
+              { src: './images/7.jpg' }
             ],
              transition: [ 'fade', 'zoomOut', 'burn', 'flash2' , 'slideRight2'],
              animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ],
