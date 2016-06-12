@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Countdown</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/vegas.min.css">
+    <link rel="stylesheet" href="./css/vegas.css">
+
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="./js/vegas.min.js"></script>
+    <script type="text/javascript" src="./js/vegas.js"></script>
+    <script type="text/javascript" src="./js/jquery.fittext.js"></script>
+
+    <script>
+      var spm = new Date('11/07/2016');
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = spm - now;
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById('countdownSPM').innerHTML = 'Done!';
+
+              return;
+          }
+          var days = Math.floor(distance / _day);
+          var hours = Math.floor((distance % _day) / _hour);
+          var minutes = Math.floor((distance % _hour) / _minute);
+          var seconds = Math.floor((distance % _minute) / _second);
+
+          document.getElementById('countdownSPM').innerHTML = 'SPM :'+days + ' Hari';
+      }
+
+      timer = setInterval(showRemaining, 1000);
+    </script>
+
+    <script>
+    var pt3 = new Date('09/07/2016');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = pt3 - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdownpt3').innerHTML = 'Done!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdownpt3').innerHTML = 'PT3 :'+days + ' Hari';
+        // document.getElementById('countdownpt3').innerHTML += hours + 'hrs ';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Header -->
+          <img src="./images/logoImtiaz.png" class="img-responsive img-thumbnail img-rounded" alt="Cinque Terre" width="104" height="36">
+          <hr>
+        </div>
+      <div class="col-lg-6">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 id="headCountdownSPM" class="active"><em>Sijil Pelajaran Malaysia</em></h4 >
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <h1 id="countdownSPM" class="text-center"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 id="headCountdownpt3" class="active"><em class="text-danger">Pentaksiran Tingkatan 3</em></h4>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <h1 id="countdownpt3" class="text-center"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p style="color: #ffffff">
+      <small class="pull-right"><em>Durian Tunggal Solution</em></small>
+    </p>
+    </div>
+
+    <script>
+        $("#example, body").vegas({
+          shuffle: true,
+            slides: [
+              { src: './images/1.jpg', fade:8000, cover:true },
+              { src: './images/2.jpg', fade:8000 },
+              { src: './images/3.jpg', fade:8000 }
+            ],
+             transition: [ 'fade', 'zoomOut', 'burn', 'flash2' , 'slideRight2'],
+             animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ],
+             overlay: './images/overlays/06.png'
+        });
+    </script>
+
+    <script>
+      jQuery("#countdownSPM").fitText(0.8);
+      jQuery("#countdownpt3").fitText(0.8);
+      jQuery("#headCountdownSPM").fitText(1.4);
+      jQuery("#headCountdownpt3").fitText(1.4);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
